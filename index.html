@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,31 +15,18 @@
             padding: 0;
             position: relative;
             overflow: hidden;
-            height: 100vh; /* Wysokość na 100% widoku */
-            background-color: rgba(255, 218, 185, 0.7); /* Odcień peachy z przezroczystością */
+            height: 100vh;
+            background-color: rgba(255, 218, 185, 0.7);
         }
 
-        /* Tło z obrazem Border Collie */
-        .background {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: url('https://upload.wikimedia.org/wikipedia/commons/0/0e/Border_Collie_portrait.jpg'); /* Link do zdjęcia */
-            background-size: cover; /* Dopasowanie tła */
-            background-position: center;
-            opacity: 0.5; /* Przezroczystość */
-            z-index: -1; /* Ustawienie tła za innymi elementami */
-        }
 
         .title-container {
-            background-color: rgba(255, 107, 129, 0.9); /* Różowy z przezroczystością */
+            background-color: rgba(255, 107, 129, 0.9);
             border-radius: 20px;
             padding: 20px;
             display: inline-block;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            margin-top: 20px; /* Mniej marginesu u góry */
+            margin-top: 20px;
         }
 
         h1 {
@@ -50,7 +38,7 @@
         #fact {
             margin-top: 20px;
             font-size: 1.5em;
-            background-color: rgba(209, 231, 255, 0.9); /* Baby blue z przezroczystością */
+            background-color: rgba(209, 231, 255, 0.8);
             border-radius: 10px;
             padding: 20px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -61,7 +49,7 @@
 
         #dogImage {
             margin-top: 20px;
-            max-width: 300px; /* Maksymalna szerokość dla obrazka psa */
+            max-width: 300px;
             border-radius: 10px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
@@ -71,7 +59,7 @@
             padding: 15px 30px;
             font-size: 1em;
             color: white;
-            background-color: #ff7f50; /* Peachy */
+            background-color: #ff7f50;
             border: none;
             border-radius: 25px;
             cursor: pointer;
@@ -79,28 +67,23 @@
         }
 
         button:hover {
-            background-color: #ff6b81; /* Różowy przy hover */
-            transform: translateY(-2px);
+            background-color: #ff6b81;
+            transform: translateY(5px);
         }
 
-        button:active {
-            transform: translateY(0);
-        }
+        
+
         .dog {
             position: absolute;
             top: 20px;
-            /* Odległość od góry */
             left: 20px;
-            /* Odległość od lewej */
             width: 100px;
-            /* Szerokość psa */
             transition: transform 0.3s;
-            /* Płynna animacja */
         }
 
         .dog:hover {
             transform: translateY(-10px);
-            /* Podniesienie psa */
+            
         }
 
         .paw {
@@ -109,14 +92,15 @@
 
         .dog:hover .paw {
             transform: translateY(-10px);
-            /* Podniesienie łapy */
+            
         }
     </style>
 </head>
+
 <body>
-    <div class="background"></div> <!-- Tło -->
-    <!-- SVG psa -->
-    <svg class="dog" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+    <div class="background"></div> 
+    
+    <svg class="dog" viewBox="0 0 200 200">
         <!-- Głowa psa -->
         <ellipse cx="100" cy="70" rx="40" ry="30" fill="#8B4513" />
         <!-- Uszy -->
@@ -140,14 +124,12 @@
         <ellipse cx="85" cy="170" rx="10" ry="5" fill="#8B4513" /> <!-- Lewa tylna łapa -->
         <ellipse cx="115" cy="170" rx="10" ry="5" fill="#8B4513" /> <!-- Prawa tylna łapa -->
     </svg>
-    
+
     <div class="title-container">
         <h1>Fakty o Psach</h1>
     </div>
     <div id="fact">Kliknij przycisk, aby zobaczyć fakt o psach!</div>
-    <button id="factBtn">Pokaż fakt</button>
-    
-    <!-- Miejsce na zdjęcie psa -->
+    <button id="factBtn">Wylosuj fakt</button>
     <img id="dogImage" src="" alt="Losowy pies" />
 
     <script>
@@ -173,4 +155,5 @@
         });
     </script>
 </body>
+
 </html>
