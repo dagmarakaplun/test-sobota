@@ -33,7 +33,7 @@
             background-size: cover;
             /* Dopasowanie tła */
             background-position: center;
-            opacity: 0.3;
+            opacity: 0.2;
             /* Przezroczystość */
             z-index: -1;
             /* Ustawienie tła za innymi elementami */
@@ -51,7 +51,7 @@
         }
 
         h1 {
-            margin: 0;
+            margin: 20px;
             color: white;
             font-size: 2.5em;
         }
@@ -124,12 +124,28 @@
     <div class="background"></div> <!-- Tło -->
     <!-- SVG psa -->
     <svg class="dog" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
-        <circle cx="100" cy="100" r="40" fill="brown" /> <!-- Głowa psa -->
-        <rect x="85" y="140" width="30" height="50" fill="brown" /> <!-- Ciało psa -->
-        <rect x="70" y="140" width="10" height="30" class="paw" fill="brown" /> <!-- Przednia łapa -->
-        <rect x="120" y="140" width="10" height="30" class="paw" fill="brown" /> <!-- Przednia łapa -->
-        <ellipse cx="85" cy="170" rx="10" ry="5" fill="brown" /> <!-- Tylna łapa -->
-        <ellipse cx="115" cy="170" rx="10" ry="5" fill="brown" /> <!-- Tylna łapa -->
+        <!-- Głowa psa -->
+        <ellipse cx="100" cy="70" rx="40" ry="30" fill="#8B4513" />
+        <!-- Uszy -->
+        <ellipse cx="70" cy="65" rx="10" ry="20" fill="#6B3E26" />
+        <ellipse cx="130" cy="65" rx="10" ry="20" fill="#6B3E26" />
+        <!-- Oczy -->
+        <circle cx="85" cy="70" r="5" fill="white" />
+        <circle cx="115" cy="70" r="5" fill="white" />
+        <circle cx="85" cy="70" r="2" fill="black" />
+        <circle cx="115" cy="70" r="2" fill="black" />
+        <!-- Nos -->
+        <ellipse cx="100" cy="80" rx="5" ry="3" fill="black" />
+        <!-- Usta -->
+        <path d="M90 90 Q100 100 110 90" stroke="black" fill="none" />
+        <!-- Ciało -->
+        <rect x="75" y="100" width="50" height="50" fill="#8B4513" />
+        <!-- Przednie łapy -->
+        <rect x="70" y="140" width="10" height="30" class="paw" fill="#8B4513" /> <!-- Lewa łapa -->
+        <rect x="120" y="140" width="10" height="30" class="paw" fill="#8B4513" /> <!-- Prawa łapa -->
+        <!-- Tylne łapy -->
+        <ellipse cx="85" cy="170" rx="10" ry="5" fill="#8B4513" /> <!-- Lewa tylna łapa -->
+        <ellipse cx="115" cy="170" rx="10" ry="5" fill="#8B4513" /> <!-- Prawa tylna łapa -->
     </svg>
     <div class="title-container">
         <h1>Fakty o Psach</h1>
