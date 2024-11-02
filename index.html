@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,8 +15,10 @@
             padding: 0;
             position: relative;
             overflow: hidden;
-            height: 100vh; /* Wysokość na 100% widoku */
-            background-color: rgba(242, 180, 204, 0.5); /* Odcień peachy z przezroczystością */
+            height: 100vh;
+            /* Wysokość na 100% widoku */
+            background-color: rgba(242, 180, 204, 0.5);
+            /* Odcień peachy z przezroczystością */
         }
 
         /* Tło z obrazem Border Collie */
@@ -25,20 +28,26 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-image: url('https://upload.wikimedia.org/wikipedia/commons/e/e4/Border_Collie_600.jpg'); /* Link do zdjęcia */
-            background-size: cover; /* Dopasowanie tła */
+            background-image: url('https://upload.wikimedia.org/wikipedia/commons/e/e4/Border_Collie_600.jpg');
+            /* Link do zdjęcia */
+            background-size: cover;
+            /* Dopasowanie tła */
             background-position: center;
-            opacity: 0.3; /* Przezroczystość */
-            z-index: -1; /* Ustawienie tła za innymi elementami */
+            opacity: 0.3;
+            /* Przezroczystość */
+            z-index: -1;
+            /* Ustawienie tła za innymi elementami */
         }
 
         .title-container {
-            background-color: rgba(248, 98, 121, 0.944); /* Różowy z przezroczystością */
+            background-color: rgba(248, 98, 121, 0.944);
+            /* Różowy z przezroczystością */
             border-radius: 20px;
             padding: 20px;
             display: inline-block;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            margin-top: 100px; /* Mniej marginesu u góry */
+            margin-top: 100px;
+            /* Mniej marginesu u góry */
         }
 
         h1 {
@@ -50,7 +59,8 @@
         #fact {
             margin-top: 40px;
             font-size: 2em;
-            background-color: rgba(209, 231, 255, 0.7); /* Baby blue z przezroczystością */
+            background-color: rgba(209, 231, 255, 0.7);
+            /* Baby blue z przezroczystością */
             border-radius: 10px;
             padding: 20px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -63,8 +73,9 @@
             margin-top: 20px;
             padding: 15px 30px;
             font-size: 1em;
-            color: rgb(224, 24, 24);
-            background-color: #ff7f50; /* Peachy */
+            color: white;
+            background-color: #ff7f50;
+            /* Peachy */
             border: none;
             border-radius: 25px;
             cursor: pointer;
@@ -72,17 +83,54 @@
         }
 
         button:hover {
-            background-color: #ff6b81; /* Różowy przy hover */
+            background-color: #ff6b81;
+            /* Różowy przy hover */
             transform: translateY(-2px);
         }
 
         button:active {
             transform: translateY(0);
         }
+
+        .dog {
+            position: absolute;
+            top: 20px;
+            /* Odległość od góry */
+            left: 20px;
+            /* Odległość od lewej */
+            width: 100px;
+            /* Szerokość psa */
+            transition: transform 0.3s;
+            /* Płynna animacja */
+        }
+
+        .dog:hover {
+            transform: translateY(-10px);
+            /* Podniesienie psa */
+        }
+
+        .paw {
+            transition: transform 0.3s;
+        }
+
+        .dog:hover .paw {
+            transform: translateY(-10px);
+            /* Podniesienie łapy */
+        }
     </style>
 </head>
+
 <body>
     <div class="background"></div> <!-- Tło -->
+    <!-- SVG psa -->
+    <svg class="dog" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+        <circle cx="100" cy="100" r="40" fill="brown" /> <!-- Głowa psa -->
+        <rect x="85" y="140" width="30" height="50" fill="brown" /> <!-- Ciało psa -->
+        <rect x="70" y="140" width="10" height="30" class="paw" fill="brown" /> <!-- Przednia łapa -->
+        <rect x="120" y="140" width="10" height="30" class="paw" fill="brown" /> <!-- Przednia łapa -->
+        <ellipse cx="85" cy="170" rx="10" ry="5" fill="brown" /> <!-- Tylna łapa -->
+        <ellipse cx="115" cy="170" rx="10" ry="5" fill="brown" /> <!-- Tylna łapa -->
+    </svg>
     <div class="title-container">
         <h1>Fakty o Psach</h1>
     </div>
@@ -105,4 +153,5 @@
         });
     </script>
 </body>
+
 </html>
